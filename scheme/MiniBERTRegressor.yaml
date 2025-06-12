@@ -1,0 +1,60 @@
+data:
+  data_path: C:\Users\Shira\Desktop\postdoc\MLFramework\data\datasets\peptides\preprocessed
+  dataset: peptides
+  pretrained_tokenizer: saved_tokenizer_peptides_dataset3000
+  run_name: try1
+  save_tokenizer: false
+  seed: 0
+  train_test_ratio: 0.2
+  train_tokenizer: false
+  train_valid_ratio: null
+  vocab_size: 100
+model:
+  attention_probs_dropout_prob:
+  - 0.1
+  evaluation_strategy:
+  - epoch
+  hidden_act:
+  - gelu
+  hidden_dropout_prob:
+  - 0.1
+  hidden_size:
+  - 1536
+  initializer_range:
+  - 0.02
+  intermediate_size:
+  - 768
+  layer_norm_eps:
+  - 1.0e-12
+  learning_rate:
+  - 2.0e-05
+  logging_dir:
+  - ./logs
+  logging_steps:
+  - 8
+  loss_threshold: 100
+  max_position_embeddings:
+  - 128
+  metric_for_best_model:
+  - mse
+  - mae
+  model_name: huggingface_MiniBERTRegressor
+  num_attention_heads:
+  - 1
+  num_hidden_layers:
+  - 4
+  num_train_epochs:
+  - 2
+  output_dir:
+  - ./results/peptides
+  per_device_train_batch_size:
+  - 128
+  pretrained_model: saved_model_peptides_dataset10000
+  run_name: try1
+  save_model: true
+  save_predictions: true
+  save_strategy:
+  - epoch
+  vocab_size: 100
+  weight_decay:
+  - 0.01
